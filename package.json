@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
-    "liquid-express-views": "^1.0.8"
+    "liquid-express-views": "^1.0.8",
+    "morgan": "^1.10.0"
   }
 }
