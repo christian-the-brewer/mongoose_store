@@ -1,0 +1,21 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.card {
+    margin: 5px;
+    background-color: antiquewhite;
+}
+
+.btn {
+    margin: 5px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+h2 {
+    text-align: center;
+}

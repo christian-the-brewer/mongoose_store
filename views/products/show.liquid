@@ -1,0 +1,31 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+    <div class="container-md">
+        <article>
+
+            <h2>{{product.name}}</h2>
+            <h3>
+                {% if product.qty > 0 %}
+                    {{product.qty}} in stock 
+                {% else %}
+                    Out Of Stock
+                {% endif %}
+            </h3>
+            <img src="{{product.img}}" alt="{{product.name}}">
+            <p>
+                {{product.description}}
+            </p>
+            <div class="btn-group">
+                {% if product.qty > 0 %}
+                <form action="/products/{{product._id}}/buy?_method=PUT" method="POST">
+                    <input type="submit" value="Buy" class="btn btn-success">
+                </form>
+                {% endif %}
+                <a href="/products/{{product._id}}/edit" class="btn btn-primary">Edit {{product.name}}</a>
+                <form action="/products/{{product._id}}?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+            </div>
+        </article>
+    </div>
+{% endblock %}
